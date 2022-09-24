@@ -11,7 +11,7 @@ function Login() {
     let navigate=useNavigate();
     let dispatch=useDispatch();
     const handlesubmit = () => {
-        axios.get(`http://localhost:4000/users?email=${email}&password=${password}`)
+        axios.get(`https://react-e-kart.herokuapp.com/users?email=${email}&password=${password}`)
         .then((res)=>{
             if(res.data.length === 1){
                 dispatch(loggedin(res.data))

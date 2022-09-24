@@ -6,7 +6,7 @@ function Orders() {
     const [allOrders, setallOrders] = useState([]);
     let id=useSelector((state)=>state.login.login[0].id)
     useEffect(()=>{
-        axios.get('http://localhost:4000/orderdata').then((res)=> {
+        axios.get('https://react-e-kart.herokuapp.com/orderdata').then((res)=> {
             setallOrders(res.data.filter((data)=> data.userid===id))
         })
     },[id])
