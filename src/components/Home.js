@@ -15,7 +15,7 @@ function Home() {
   
   useEffect(() => {
     axios
-      .get("http://localhost:4000/products/")
+      .get("https://react-e-kart.herokuapp.com//products/")
       .then((res) => dispatch(getall(res.data)));
   }, [dispatch]);
   return (
