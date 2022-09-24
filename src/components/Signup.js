@@ -54,7 +54,7 @@ function Signup() {
   };
   return (
     <>
-    {JSON.stringify(data)}
+    
       <section className="vh-100 gradient-custom">
         <div className="container py-5">
           <div className="row d-flex justify-content-center align-items-center">
