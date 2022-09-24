@@ -1,0 +1,55 @@
+.outerCarousel{
+    padding: 2%;
+    margin: "auto";
+    width: "50%";
+    height: "600px";
+    background:linear-gradient(45deg,lightblue,black,orange)
+}
+.imgCarousel{
+    width: 100px;
+    height: 150px;
+    
+}
+.special{
+    height: 150px;
+    width: 100px;
+}
+.nameCarousel{
+    font-style: italic;
+    font-size: 300%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+.discountCarousel{
+    background: transparent;
+    color: rgb(67, 156, 22);
+    width:'20%' !important;
+    margin:'auto';
+    font-size:30px,
+}
+.priceCarousel{
+    font-size: 20px;
+}
+
+@media screen and (max-width:911px) {
+    .nameCarousel{
+        font-size: large;
+    }
+    .imgCarousel{
+        height: 90px;
+        padding-top: auto;
+    }
+    .discountCarousel{
+        height: min-content;
+    }
+    .special{
+        height: 24px;
+        width: 24px;
+        padding-top: 1%;
+    }
+    .priceCarousel{
+        font-size: 13px;
+    }
+}
