@@ -21,7 +21,7 @@ function Cart() {
   const handleorder = (payment_details) =>{
     let selectedcard=card.filter((data)=> data.number===radioip.card)  
     if(selectedcard[0].cvv ===payment_details.cvv && parseInt(payment_details.pin)===1234){
-      axios.post('http://localhost:4000/orderdata',{userid:id,date:new Date().toDateString(),products:cartData,quantity:quantity,card:radioip.card,address:radioip?.address,totalPrice:String(subtotal.reduce((prev, curr) => prev + curr, 0))})
+      axios.post('https://react-e-kart.herokuapp.com/orderdata',{userid:id,date:new Date().toDateString(),products:cartData,quantity:quantity,card:radioip.card,address:radioip?.address,totalPrice:String(subtotal.reduce((prev, curr) => prev + curr, 0))})
       .then((res)=> {
         dispatch(emptycart());
         navigate('/confirm-order',{state:res.data.id});

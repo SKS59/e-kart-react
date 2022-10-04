@@ -33,7 +33,7 @@ function Signup() {
     }
     else{
     axios
-      .post("http://localhost:4000/users", {
+      .post("https://react-e-kart.herokuapp.com/users", {
         email: data.email,
         password: data.password,
         firstname: data.firstname,
