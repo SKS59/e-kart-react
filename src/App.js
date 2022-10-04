@@ -18,6 +18,7 @@ import {PersistGate} from 'redux-persist/integration/react'
 import {persistStore} from 'redux-persist'
 import Wishlist from "./components/Wishlist";
 import SearchProduct from "./components/SearchProduct";
+import Footer from "./components/Footer";
 // import Checkout from "./components/Checkout";
 function App() {
   let persistor=persistStore(Store)
@@ -40,6 +41,7 @@ function App() {
           <Route path='/confirm-order' element={<ConfirmOrder/>}/>
           <Route path='/search-product' element={<SearchProduct/>}/>
         </Routes>
+        <Footer/>
         <ToastContainer/>
         </PersistGate>
       </BrowserRouter>

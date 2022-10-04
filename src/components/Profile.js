@@ -30,7 +30,7 @@ export default function Profile() {
   });
   const handleSubmit = () => {
     axios
-      .put("https://react-e-kart.herokuapp.com/users/" + sdata[0].id, {
+      .put("https://reactecart.herokuapp.com/users/" + sdata[0].id, {
         email: data.email,
         password: data.password,
         firstname: data.firstname,

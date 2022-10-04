@@ -11,7 +11,7 @@ function Product() {
   let dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get("https://react-e-kart.herokuapp.com/products/" + param.id).then((res) => {
+    axios.get("https://reactecart.herokuapp.com/products/" + param.id).then((res) => {
       dispatch(getone(res.data));
     });
     return () => {
