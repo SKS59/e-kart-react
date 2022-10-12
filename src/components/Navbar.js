@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink,Link, useNavigate } from "react-router-dom";
 import { loggedin } from "../action/Action";
 import "../index.css";
+import "./navbar.css";
 function Navbar() {
   let Cart_count = useSelector((state) => state.cart.cart.length);
   let WishList_count = useSelector((state) => state.wishlists.wishlist.length);
@@ -26,8 +27,8 @@ function Navbar() {
       {
       isloggedin ? (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <NavLink className="navbar-brand" href="#">
-            <img src="/images/logo.png" style={{width:'50%'}} alt=''/>
+          <NavLink className="navbar-brand" to='/home'>
+            <img src="/images/logo.png" style={{width:'15%'}} alt=''/>
           </NavLink>
           <button
             className="navbar-toggler"
@@ -99,9 +100,13 @@ function Navbar() {
           </div>
         </nav>
       ) : (
+        <>
+        {/* <NavLink className="navbar-brand" to='/home'>
+          <img src="/images/logo.png" style={{width:'20%'}} alt='..'/>
+          </NavLink> */}
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <NavLink className="navbar-brand" href="#">
-          <img src="/images/logo.png" style={{width:'40%'}} alt='..'/>
+          <NavLink className="navbar-brand" to='/home'>
+          <img src="/images/logo.png" style={{width:'15%'}} alt='..'/>
           </NavLink>
           <button
             className="navbar-toggler"
@@ -166,7 +171,7 @@ function Navbar() {
             </form>
           </div>
         </nav>
-      )}
+      </>)}
     </>
   );
 }

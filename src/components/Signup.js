@@ -80,7 +80,6 @@ function Signup() {
                           }
                         }}
                         type="email"
-                        
                         className="form-control form-control-lg"
                       />
                     </div>

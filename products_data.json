@@ -520,6 +520,7 @@
       "firstname": "Steve",
       "lastname": "Edwards",
       "cart": [],
+      "gender":"M",
       "address": [
         "16, NDV street, Pune 420002",
         "14, Downtown, Mumbai,400005"
